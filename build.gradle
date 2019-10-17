@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.9.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+compileJava.options.encoding = 'UTF-8'
+
+ext['kotlin.version'] = '1.3.10'
+
+
+dependencies {
+	compileOnly 'org.projectlombok:lombok:1.18.10'
+	annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+	implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.10.0'
+	implementation 'com.graphql-java-kickstart:graphql-java-tools:5.6.1'
+
+	runtime 'com.graphql-java-kickstart:altair-spring-boot-starter:5.10.0'
+	runtime 'com.graphql-java-kickstart:graphiql-spring-boot-starter:5.10.0'
+	runtime 'com.graphql-java-kickstart:voyager-spring-boot-starter:5.10.0'
+
+	implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+//  testCompile 'com.graphql-java-kickstart:graphql-spring-boot-starter-test:5.10.0'
